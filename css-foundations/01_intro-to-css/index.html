@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to CSS</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- 002 Example of Type Selector -->
+    <div>Hello, World!</div>
+    <div>Hello again!</div>
+    <p>Hi...</p>
+    <div>Okay, bye.</div>
+
+    <!-- 003 Example of Class Selector -->
+    <div class="alert-text">Please agree to our terms of service.</div>
+
+    <!-- 004 Example of ID Selector -->
+    <div id="title">My Awesome 90's Page</div>
+
+    <!-- 006.1 Chaining Selectors -->
+    <div class="subsection header">Latest Posts</div>
+    <!-- 006.1 Chaining Selectors: ID and class -->
+    <p class="subsection" id="preview">This is where a preview for a post might go.</p>
+
+    <!-- 007 Descendant Combinator -->
+    <div class="ancestor"><!--A-->a
+        <div class="contents"><!--B-->b
+            <div class="contents"><!--C-->c</div>
+        </div>
+    </div>
+    <div class="contents"><!--D-->d</div>
+
+    <!-- 008 Color and Background Color -->
+    <p class="hex">This is hex</p>
+    <p class="rgb">This is rgb</p>
+    <p class="hsl">This is hsl</p>
+</body>
+</html>

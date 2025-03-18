@@ -1,0 +1,121 @@
+/* 001 Universal Selector */
+* {
+    color: purple;
+}
+
+/* 002 Type Selector */
+div {
+    color: white;
+}
+
+/* 003 Class Selector */
+.alert-text {
+    color: red;
+}
+
+/* 004 ID Selector */
+#title {
+    background-color: red;
+}
+
+/* 005 Grouping Selector */
+.read, 
+.unread {
+    color: white;
+    background-color: black;
+}
+
+/* .read {
+    several unique declarations
+
+
+.unread {
+    several unique declarations
+} */
+
+/* 006.1 Chaining Selectors */
+/* Selects the element that has both classes by example */
+/* You can't chain more than one type selectors */
+.subsection.header {
+    color: red;
+}
+
+/* 006.2 Chaining Selectors: ID and class */
+.subsection#preview {
+    color: blue;
+}
+
+/* 007 Descendant Combinator */
+/* Only cause elements tahat match the last selector to be selected if they also have an ancestor that matches previous selector */
+.ancestor .contents {
+    color: burlywood;
+    /* some declarations */
+}
+
+/* =================================================================== */
+/* CSS Properties */
+/* 008 Color and Background Color */
+/* Accepts names, HEX, HSL, RGB */
+.hex {
+    color: #1100ff;
+}
+
+.rgb {
+    color: rgb(100, 0, 127);
+}
+
+.hsl {
+    color: hsl(15, 82%, 56%);
+}
+
+/* 009 Typography and text-align */
+/* 009.1 font-family: single value or comma separated list of values, indicates the font to use; font families with " ", while the generic ones without " " */
+/* example --------------> font-family: "Times New Roman", serif; */
+/* 009.2 font-size: as the name indicates it sets the size of the font, don't use whitespaces */
+/* example --------------> font-size: 20px; */
+/* 009.3 font-weight: It affects the boldness of the text, uses keywords or numbers (100 to 900) */
+/* example --------------> font-weight: bold; */
+/* example --------------> font-weight: 300; */
+/* 009.4 text-align: Align the text horizontally within an element, use common keywords. */
+/* example --------------> text-align: center; */
+
+/* 010 Image Height and Width */
+/* By default the sizes are the original ones of the image */
+/* To avoid losing proportions we use the property auto; */
+/* example */
+/* img {
+    height: auto;
+    width: 500px;
+} */
+
+/* 011 Adding CSS to HTML */
+/* 011.1 External CSS */
+/* Most used method, uses a separated file for the css and links it to html in the <head> via <link> element */
+/* example */
+/* <head>
+  <link rel="stylesheet" href="styles.css">
+</head> */
+
+/* 011.2 Internal CSS */
+/* Embedded CSS, adds the css into the html file, places all the rules inside a <style> tag placed inside the <head> element inside the html file. */
+/* example */
+/* <head>
+  <style>
+    div {
+      color: white;
+      background-color: black;
+    }
+
+    p {
+      color: red;
+    }
+  </style>
+</head> */
+
+/* 011.3 Inline CSS */
+/* Adds css directly into html elements, this method isn't recommended */
+/* Overrids external and internal CSS, this can be taken advantage of */
+/* example */
+/* <body>
+  <div style="color: white; background-color: black;">...</div>
+</body> */
