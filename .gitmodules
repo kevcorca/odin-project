@@ -1,0 +1,3 @@
+[submodule "02_css/css-exercises"]
+	path = 02_css/css-exercises
+	url = git@github.com:kevcorca/css-exercises.git
