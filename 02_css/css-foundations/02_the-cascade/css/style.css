@@ -1,0 +1,85 @@
+/* Specificity */
+
+/* Example 1 */
+/* .subsection {
+    color: blue;
+}
+
+.main .list {
+    color: red;
+} */
+
+/* Example 2 */
+/* #subsection {
+    color: blue;
+}
+
+.main .list {
+    color: red;
+} */
+
+/* Example 3 */
+#subsection {
+    background-color: yellow;
+    color: blue;
+}
+
+.main #subsection {
+    color: red;
+}
+
+/* Example 4 */
+/* Special symbols (*,+,>,~,(blank_space)), doesn't add specificity */
+/* Both have the same specificity */
+.class.second-class {
+    font-size: 12px;
+}
+
+.class .second-class {
+    font-size: 24px;
+}
+
+/* The > doesn't add specificity value */
+.class.second-class {
+    font-size: 12px;
+}
+
+.class > .second-class {
+    font-size: 24px;
+}
+
+/* Example 5 */
+/* second rule (h1) takes precedence because is a type selector */
+* {
+    color: black;
+}
+
+h1 {
+    color: orange;
+}
+
+/* ==================================================== */
+
+/* Inheritance */
+
+/* Example 1 */
+#parent {
+    color: red;
+}
+
+.child {
+    color: blue;
+}
+
+/* ==================================================== */
+
+/* Rule Order */
+
+/* Example 1 */
+.alert {
+    color: red;
+}
+
+.warning {
+    color: yellow;
+}
