@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Box</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>The Box</h1>
+    <p>Every thing on a webpage is a rectangular box, boxes can have other boxes in them or sit alongside each other</p>
+    <p>a rought idea is applying a outline to every element via CSS</p>
+    <p>Laying out a webpage is deciding how to nest and stack these boxes</p>
+    <ul>
+        <p>Parts of a Box</p>
+        <li>Content box: area where the content is displayed</li>
+        <li>Padding box: Padding sits around the conted as white space</li>
+        <li>Border box: Border wraps the content as white space</li>
+        <li>Margin box: Wraps the content, padding and border as whitespace between this box and other elements</li>
+        <img src="./img/box-model.png" alt="the box model">
+    </ul>
+    <p>Standard declaration</p>
+    <p>
+        .box { <br>
+            width: 350px; <br>
+            height: 150px; <br>
+            margin: 10px; <br>
+            padding: 25px; <br>
+            border: 5px solid black; <br>
+          }
+    </p>
+    <ul>We can manipulate these boxes using
+        <li><strong>padding:</strong> increases the space between the border of the box and the content of the box</li>
+        <li><strong>border:</strong> adds space between margin and padding</li>
+        <li><strong>margin:</strong> increases the space between the borders of a box and the borders of adjacent boxes</li>
+    </ul>
+    <p>Here is an example</p>
+    <img src="./img/box-model.png" alt="the box model">
+
+    <p class="box-one">One</p>
+    <p class="box-two">Two</p>
+
+    <p>Use box-sizing: border-box</p>
+    <br>
+    <h2><strong>Box Properties</strong></h2>
+    <ul><strong>block</strong>
+        <li>box break into a new line</li>
+        <li>width and height properties are respected</li>
+        <li>padding, margin, border cause other elements be pushed away from the box</li>
+        <li>if width isnt specified the box extend inline direction to fill the space avaliable on the container, filling up to 100% space</li>
+        <li>elements like h1 (h2, h3, etc) and p use block as default</li>
+    </ul>
+    <br>
+    <ul><strong>inline</strong>
+        <li>the box doesn't break onto a new line</li>
+        <li>width and height properties not applies</li>
+        <li>top - bottom padding, margin and border applies but not cause other inline boxes move away from the box</li>
+        <li>left - right padding, margin and border applies and cause other inline boxes move away from the box</li>
+        <li>elements like a, span, em and strong use inline as default</li>
+    </ul>
+    <br>
+    <h2>Inner and outer display types</h2>
+    <p>block and inline are said to be outer display types, affects the relation to other boxes around it</p>
+    <p>While you can change the inner display type for example display: flex;</p>
+    <p>The outer will still be block but the inner will be flex</p>
+    <p>The childs of this box will have the flex propertie and behave according to the flexbox specifications</p>
+    <p>Other inner values are grid</p>
+    <br>
+    <h2>Different display types</h2>
+    <p>This example has 3 different html elements with an outer display of block</p>
+    <ul>
+        <li>paragraph with a border added in CSS, browser will rend this as block box and p starts on a new line and extends with the avaliable width</li>
+        <li>list using flex, the child will be flex items, the list is a block box and extends within full width</li>
+        <li>a block level p, inside two span elements, these elements are normally inline, but one of them has a display: block; propertie</li>
+
+    </ul>
+    <p class="example-p">I am a paragraph. A short one.</p>
+    <ul class="example-ul">
+        <li class="example-li">Item One</li>
+        <li class="example-li">Item Two</li>
+        <li class="example-li">Item Three</li>
+    </ul>
+    <p class="example-p">
+        I am another paragraph. Some of the <span class="block">words</span> have been
+        wrapped in a <span>span element</span>.
+    </p>
+
+    <p>We can see how the inline elements behave</p>
+    <ul>
+        <li>The span elements in the first paragraph are inline so do not force line breaks</li>
+        <li>The ul elements are set to display inline-flex that creates an inline box containing some flex elements</li>
+        <li>The two p are both set to display inline so, all run togheter o one line rather than breaking onto new lines</li>
+    </ul>
+
+    <p>To toggle between display modes we can change display: inline to display: block or display: flex to display: inline-flex</p>
+    <p class="example-p2">
+        I am a paragrah. Some of the
+        <span class="example-span">words</span> have been wrapped in a <span class="example-span">span element</span>.
+    </p>
+    <ul class="example-ul2">
+        <li class="example-li2">Item One</li>
+        <li class="example-li2">Item Two</li>
+        <li class="example-li2">Item Three</li>
+    </ul>
+    <p class="inline example-p2">I am a paragraph. A short one.</p>
+    <p class="inline example-p2">I am another paragraph. Also a short one.</p>
+    <p><strong>The key to remember:</strong> changing the display value change wheter the outer display type of a box is block or inline, the way it displays alongside other elements on the layout</p>
+    
+    <h3>The box model and inline boxes</h3>
+    <ul><p>In the example below:</p>
+        <li>Width and height are ignored</li>
+        <li>Top and bottom margin, padding and border are respected but don't change the relationship of other content</li>
+        <li>Padding and border overlaps other words in the paragraph</li>
+        <li>Left and right padding, margin and border move other content away from the box</li>
+    </ul>
+    <p class="example-p3">
+        I am a paragraph and this is a <span class="example-span2">span</span> inside that paragraph. A span
+        is an inline element and so does not respect width and height.
+    </p>
+    <h3>Using display: inline-block;</h3>
+    <p>Middle ground between inline and block</p>
+    <p>USES: If you don't want an item to break onto a new line but you want to respect width and height to avoid overlapping</p>
+    <ul>
+       <p>Does</p> 
+       <li>Width and height values are respected</li>
+       <li>padding, margin and border cause other elements to be pushed away from the box</li>
+       <li>It doesn't break onto a new line</li>
+       <li>It only become larger than its content only if you specify it on width and height properties</li>
+    </ul>
+    <p class="example-p4">
+        I am a paragraph and this is a <span class="example-span3">span</span> inside that paragraph. A <span>is a inline element and so does not respect width and height.</span>
+    </p>
+    <p>This is useful when you want to give a link a larger hit area, is commonly used in nav elements</p>
+    <br>
+    <img src="./img/centering.png" alt="centering context">
+</body>
+</html>
