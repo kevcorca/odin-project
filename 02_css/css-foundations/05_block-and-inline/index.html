@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Block and Inline</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <h1>Block and Inline</h1>
+        <p>CSS has 2 box types: block and inline</p>
+        <p>display propertie controls how html elements will display</p>
+        <br>
+        <h2>Block vs Inline</h2>
+        <p>The default is display: block;</p>
+        <p>In the display block the elements appear stacked atop each other, each new element will start a new line</p>
+        <p>In the display inline the elements will not start a new line, appear in line of other elements placed beside, normally, you don't want to put extra padding or margin on inline elements</p>
+        <p>In the display inline-block the elements behave like inline elements but with block style padding and margin</p>
+        <br>
+        <h2>Divs and spans</h2>
+        <p>div and span are generic boxes without any meaning</p>
+        <p>we can give id and class to those elements</p>
+        <br>
+        <h3>Div</h3>
+        <p>div is a block element and is used as container for grouping of other elements</p>
+        <!-- div example -->
+        <div class="introduction">
+            <h2>Introduction</h2>
+        </div>
+        <div class="main-content">
+            <h2>Main Content</h2>
+        </div>
+        <div class="contact-us">
+            <h2>Contact Us</h2>
+        </div>
+        <br>
+        <h3>Span</h3>
+        <p>span is an inline element and is used to group text content and inline HTML elements, is used when no other semantic HTML element is appropiate</p>
+        <p>Example:</p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, <span class="highlight">quis nostrud <a href="https://www.dictionary.com/browse/exercitation">exercitation</a>
+            ullamco laboris</span> nisi ut aliquip ex ea comodo consequat.
+        </p>
+        <br>
+        <h2>Overriding Normal Flow</h2>
+        <ul>
+            <li><strong>display propertie: </strong>values as block, inline or inline-block change the normal flow</li>
+            <li><strong>floats: </strong>applying value (for example left), wraps on one side of the element</li>
+            <li><strong>positioning: </strong>position propertie allow to precisely control the placement of boxes inside boxes, static is the default</li>
+            <li><strong>specific layout systems via display: </strong>like grid or flexbox</li>
+            <li><strong>responsive design: </strong>depends on screen and resolution</li>
+        </ul>
+    </body>
+</html>
